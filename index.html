@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JohnDoe - Portfolio d'Archéologue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 1s ease-out; }
+    </style>
+    <meta name="description" content="JohnDoe - Portfolio d'Archéologue">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-orange-600">JohnDoe</h1>
+            <div class="space-x-6">
+                <a href="#accueil" class="hover:text-orange-600 transition">Accueil</a>
+                <a href="#projets" class="hover:text-orange-600 transition">Projets</a>
+                <a href="#contact" class="hover:text-orange-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="accueil" class="h-screen parallax flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1680598205089-4f95b6ffb6f3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwxMXx8YXJjaGVvbG9naXN0fGVufDB8MHx8fDE3NDIzMDY2NjJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080')">
+        <div class="text-center text-white bg-black/50 p-12 rounded-xl animate-slide">
+            <h1 class="text-5xl font-bold mb-4">John Doe</h1>
+            <p class="text-2xl">Archéologue passionné | Explorateur de civilisations anciennes</p>
+        </div>
+    </header>
+
+    <section id="projets" class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-orange-600">Mes Découvertes</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+                <img src="https://fakeimg.pl/400x300?text=Projet1" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold mb-2">Cité Maya</h3>
+                <p>Exploration et cartographie d'une cité maya préservée dans la jungle du Yucatan.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+                <img src="https://fakeimg.pl/400x300?text=Projet2" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold mb-2">Vestiges Gaulois</h3>
+                <p>Fouilles et analyse de sites archéologiques gaulois en Normandie.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+                <img src="https://fakeimg.pl/400x300?text=Projet3" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold mb-2">Épaves Méditerranéennes</h3>
+                <p>Recherche et documentation d'épaves antiques en Méditerranée.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-orange-600 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Contactez-moi</h2>
+            <div class="flex justify-center space-x-6 text-4xl">
+                <a href="#" class="hover:text-orange-200 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-orange-200 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-orange-200 transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        © 2024 John Doe - Portfolio d'Archéologue
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
